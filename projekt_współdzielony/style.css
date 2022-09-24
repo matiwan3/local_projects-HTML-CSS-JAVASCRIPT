@@ -9,7 +9,7 @@ h1{
     
 }
 .pudelko{
-    border: solid black 3px;
+    border: double black 10px;
     border-radius: 20px;
     display: block;
     margin-left: auto;
