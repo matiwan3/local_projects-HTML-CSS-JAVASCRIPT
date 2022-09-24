@@ -1,6 +1,6 @@
 body {
     font-family: 'Fantasy';
-    background-color: #74f300;
+    background-color: #9c9c9c;
     text-align: center;
     align-items: center;
 
@@ -9,11 +9,13 @@ h1{
     
 }
 .pudelko{
+    border: solid black 3px;
+    border-radius: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 500px;
+    width: 60%;
     height: 200px;
-    background-color: #f05702;
+    background-color: #ebebeb;
 }
