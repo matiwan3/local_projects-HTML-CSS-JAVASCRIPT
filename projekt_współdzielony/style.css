@@ -14,8 +14,17 @@ h1{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
     width: 60%;
     height: 200px;
     background-color: #ebebeb;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li 
+{
+    display: inline;
 }
