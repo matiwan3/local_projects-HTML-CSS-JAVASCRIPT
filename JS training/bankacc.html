@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Bank Account System</title>
+</head>
+<body>
+    <h1>Bank Account System</h1>
+    <script>
+        // Global Variables
+        let accounts = []
+
+        // Class for bank account
+        class BankAccount {
+            constructor(accountNumber, owner, balance) {
+                this.accountNumber = accountNumber;
+                this.owner = owner;
+                this.balance = balance;
+            }
+
+            // Deposit money into the account
+            deposit(amount) {
+                if (amount > 0) {
+                    this.balance += amount;
+                    console.log(`Deposit $${amount} into account ${this.accountNumber}.`)
+                } else {
+                    console.log("Invalid deposit amount.");
+                }
+            }
+            
+            // Withdraw money from the account
+            withdraw(amount) {
+                if (amount > 0 && amount <= this.balance) {
+                    this.balance -= amount;
+                    console.log(`Withdrawn $${amount} from account ${this.accountNumber}.`);
+                } else {
+                    console.log("Invalid withdrawal amount fo insufficient balance")
+                }
+            }
+
+            // Check account balance
+            checkBalance() {
+                console.log(`Account ${this.accountNumber} balance: $${this.balance}`);
+            }
+        }
+
+        // Function to create a new account
+        function createAccount(accountNumber, owner, initialBalance) {
+            const account = new BankAccount(accountNumber, owner, initialBalance);
+            accounts.push(account)
+            console.log(`Account ${accountNumber} created for ${owner} with initial balance $${initialBalance}.`)
+        }
+
+        // Function to simulate account transactions
+        function simulateTransactions() {
+            for (const account of accounts) {
+                account.deposit(Math.random() * 1000); // Random deposit
+                account.withdraw(Math.random() * 500); // Random withdrawal
+                account.checkBalance();
+            }
+        }
+
+        // Create some accounts
+        createAccount(1, "Alice", 1000);
+        createAccount(2, "Bob", 1500);
+        createAccount(3, "Charlie", 2000);
+
+        // Simulate acount transactions
+        simulateTransactions();
+    </script>
+</body>
+</html>

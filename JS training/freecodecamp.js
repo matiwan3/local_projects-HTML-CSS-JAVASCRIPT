@@ -297,10 +297,14 @@ function testElse(val) {
     var result = "";
 
     if (val > 5)
+    pass
 }
+
+
 // if
 // else
 // else if
+// javascript is a programming language
 
 
 

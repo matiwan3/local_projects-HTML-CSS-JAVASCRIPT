@@ -1,0 +1,22 @@
+{
+  "name": "local_projects-html-css-javascript",
+  "version": "1.0.0",
+  "description": "*Here you can view all my html,css and javascript projects which I made for jobs recruitment or just for myself.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiwan3/local_projects-HTML-CSS-JAVASCRIPT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiwan3/local_projects-HTML-CSS-JAVASCRIPT/issues"
+  },
+  "homepage": "https://github.com/matiwan3/local_projects-HTML-CSS-JAVASCRIPT#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.13.0"
+  }
+}
