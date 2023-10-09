@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        // Global variables
+        const taskList = document.getElementById("taskList");
+        const taskInput = document.getElementById("taskInput");
+        let tasks = [];
+
+        // Class for a task
+        class Task {
+            constructor(id, text) {
+                this.id = id;
+                this.text = text;
+            }
+        }
+
+        // Function to add a task
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText !== "") {
+                const taskId = tasks.length + 1;
+                const task = new Task(taskId, taskText);
+                tasks.push(task);
+
+                const listItem = document.createElement("li");
+                listItem.textContent = task.text;
+                listItem.id = "task" + task.id;
+                listItem.innerHTML += `<button onclick="removeTask(${task.id})">Remove</button>`;
+                taskList.appendChild(listItem);
+
+                taskInput.value = "";
+            }
+        }
+
+        // Function to remove a task
+        function removeTask(taskId) {
+            const taskIndex = tasks.findIndex(task => task.id === taskId);
+            if (taskIndex !== -1) {
+                tasks.splice(taskIndex, 1);
+                const taskElement = document.getElementById("task" + taskId);
+                taskElement.remove();
+            }
+        }
+    </script>
+</body>
+</html>
